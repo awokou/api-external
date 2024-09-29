@@ -1,4 +1,5 @@
-country:
-  api:
-    uri: https://countriesnow.space/api/v0.1/countries/population/cities
-    uriCreate: https://api.instantwebtools.net/v1/airlines
+api:
+  uri: https://countriesnow.space/api/v0.1/countries/population/cities
+  uriCreate: https://api.instantwebtools.net/v1/airlines
+  uriAlbum: https://jsonplaceholder.typicode.com/albums/
+
