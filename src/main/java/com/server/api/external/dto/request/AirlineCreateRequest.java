@@ -1,13 +1,9 @@
-package com.server.api.external.model;
+package com.server.api.external.dto.request;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
-public class AirlineModel {
+public class AirlineCreateRequest {
     private Long id;
     private String name;
     private String country;

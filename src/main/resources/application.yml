@@ -1,5 +1,27 @@
-api:
-  uri: https://countriesnow.space/api/v0.1/countries/population/cities
-  uriCreate: https://api.instantwebtools.net/v1/airlines
-  uriAlbum: https://jsonplaceholder.typicode.com/albums/
+spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/post?schema=public
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: false
 
+client:
+     baseUrl: https://jsonplaceholder.typicode.com
+     countryUrl: https://countriesnow.space/api/v0.1/countries/population/cities
+     airlinesUrl : https://api.instantwebtools.net/v1
+
+
+eureka:
+ client:
+   serviceUrl:
+     defaultZone: http://localhost:8761/eureka
+   instance:
+   preferIpAddress: true
