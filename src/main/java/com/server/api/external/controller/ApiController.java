@@ -46,4 +46,9 @@ public class ApiController {
     public ResponseEntity<AirlineResponse> readAirLineById (@PathVariable("airlineId") String airlineId) {
         return ResponseEntity.ok(apiClient.readAirLineById(airlineId));
     }
+
+    @GetMapping("/post/{id}")
+    public ResponseEntity<String> getPostEntity(int id) {
+        return ResponseEntity.ok(postService.getPost(id));
+    }
 }

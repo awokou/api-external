@@ -8,15 +8,17 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api")
 public class CountryController {
+
     private final CountryService countryService;
+
     public CountryController(CountryService countryService) {
         this.countryService = countryService;
     }
 
     @GetMapping("/country")
-    public ResponseEntity<Object> getAllCountry() {
+    public ResponseEntity<String> getAllCountry() {
         try {
-            Object result = this.countryService.getAllCountry();
+            String result = this.countryService.getAllCountry();
             return new ResponseEntity<>(result, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);

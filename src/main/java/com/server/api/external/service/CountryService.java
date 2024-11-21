@@ -27,19 +27,16 @@ public class CountryService {
         this.countryRestClient = countryRestClient;
     }
 
-    public Object getAllCountry() {
-        try {
-            return this.restTemplate.getForObject(countryUrl, Object.class);
-        } catch (Exception e) {
-            LOGGER.error(ERROR, e.getMessage());
-            return null;
-        }
+    public String  getAllCountry() {
+        return restTemplate.getForObject(countryUrl, String.class);
     }
 
     public Object allCountry() {
         try {
-            return countryRestClient.allCountry();
+            Object result = countryRestClient.allCountry();
+            return result;
         } catch (Exception e) {
+            LOGGER.error("");
             return null;
         }
     }

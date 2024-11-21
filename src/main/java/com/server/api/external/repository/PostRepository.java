@@ -1,6 +1,6 @@
 package com.server.api.external.repository;
 
-import com.server.api.external.model.Post;
+import com.server.api.external.entity.Post;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

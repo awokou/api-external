@@ -1,4 +1,4 @@
-package com.server.api.external.model;
+package com.server.api.external.entity;
 
 
 import jakarta.persistence.*;

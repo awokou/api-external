@@ -17,11 +17,3 @@ client:
      baseUrl: https://jsonplaceholder.typicode.com
      countryUrl: https://countriesnow.space/api/v0.1/countries/population/cities
      airlinesUrl : https://api.instantwebtools.net/v1
-
-
-eureka:
- client:
-   serviceUrl:
-     defaultZone: http://localhost:8761/eureka
-   instance:
-   preferIpAddress: true
